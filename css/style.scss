@@ -16,7 +16,6 @@ body {
 }
 
 .banner {
-  background-color: #080707d5;
   height: 100vh;
   .row {
     .content {
@@ -73,12 +72,31 @@ body {
   }
 }
 
+.section-about-us {
+  position: relative;
+  z-index: 4;
+}
+
 .about-usbox {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-perspective: 1000px;
   perspective: 1000px;
 
+  .about-usbox-front {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      331deg,
+      rgba(255, 255, 255, 1) 37%,
+      rgba(2, 0, 36, 0.8547794117647058) 68%,
+      rgba(2, 0, 36, 1) 75%,
+      rgba(239, 239, 241, 1) 98%
+    );
+  }
+
+  .about-usbox-back {
+    background-color: whitesmoke;
+  }
   .about-usbox-front,
   .about-usbox-back {
     position: relative;
@@ -93,7 +111,7 @@ body {
     text-align: center;
     // min-height: 280px;
     height: auto;
-    // border-radius: 10px;
+    border-radius: 10px;
     color: #fff;
     // font-size: 1.5rem;
     aspect-ratio: 1/1;
@@ -101,9 +119,10 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    background-color: orange;
 
     .inner {
+      overflow: hidden;
+      color: black;
       -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
       transform: translateY(-50%) translateZ(60px) scale(0.94);
       top: 50%;
@@ -194,7 +213,7 @@ body {
         }
 
         @media (min-width: 992px) {
-          width: 120px;
+          width: 192px;
         }
       }
 
@@ -226,12 +245,198 @@ body {
       position: absolute;
 
       background-color: blue;
-      z-index: 1;
+      z-index: 8;
     }
 
     .inner {
       transition: all 0.7s ease;
       opacity: 0;
     }
+  }
+}
+
+.animate-charcter {
+  align-self: center;
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #18a5d8 0%,
+    #14965b 29%,
+    #9113ff 67%,
+    #00fbff 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.imagebox {
+  position: absolute;
+}
+.image-1 {
+  // position: absolute;
+  height: 78vh;
+  background-size: cover;
+  background: url(../skillscompete.jpg) no-repeat content-box;
+  background-size: contain;
+
+  &::after {
+    // position: relative;
+    position: relative;
+    content: "";
+    height: 90%;
+    width: 100%;
+    background: #00a9ffa6;
+    display: block;
+    right: -70px;
+    top: 37px;
+    z-index: -1;
+  }
+}
+
+.aboutmemessage {
+  background: whitesmoke;
+  border-radius: 10px;
+}
+
+.circles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.circles li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  animation: circlesanimate 25s linear infinite;
+  bottom: -150px;
+}
+
+.circles li:nth-child(1) {
+  left: 25%;
+  width: 80px;
+  height: 80px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(2) {
+  left: 10%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 2s;
+  animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+  left: 70%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+  animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+  left: 65%;
+  width: 20px;
+  height: 20px;
+  animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+  left: 75%;
+  width: 110px;
+  height: 110px;
+  animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+  left: 35%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+  left: 50%;
+  width: 25px;
+  height: 25px;
+  animation-delay: 15s;
+  animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-delay: 2s;
+  animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+  left: 85%;
+  width: 150px;
+  height: 150px;
+  animation-delay: 0s;
+  animation-duration: 11s;
+}
+
+@keyframes circlesanimate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
+.carousel-item {
+  .image1 {
+    margin: auto;
+    height: 65vh;
+    width: 70%;
+    background: red;
+  }
+  .image2 {
+    margin: auto;
+    height: 65vh;
+    width: 70%;
+    background: red;
+  }
+  .image3 {
+    margin: auto;
+    height: 65vh;
+    width: 70%;
+    background: red;
   }
 }
