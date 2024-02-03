@@ -3,7 +3,18 @@
 body {
   overflow-x: hidden;
 }
-
+.container1 {
+  height: 100vh;
+  background-color: red;
+}
+.container2 {
+  height: 100vh;
+  background-color: blue;
+}
+.image {
+  height: 117vh;
+  background: url("/me_preview.png") no-repeat;
+}
 .head {
   max-width: 100%;
   background-color: whitesmoke;
@@ -17,6 +28,9 @@ body {
 
 .banner {
   height: 100vh;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
   .row {
     .content {
       position: relative;
@@ -139,9 +153,9 @@ body {
       max-height: 100%;
       overflow: auto;
 
-      @media (min-width: 768px) {
-        padding: 1rem;
-      }
+      // @media (min-width: 768px) {
+      //   padding: 1rem;
+      // }
     }
 
     &::after {
@@ -209,11 +223,11 @@ body {
         margin-bottom: 30px;
 
         @media (min-width: 768px) {
-          width: 80px;
+          width: 162px;
         }
 
         @media (min-width: 992px) {
-          width: 192px;
+          width: 231px;
         }
       }
 
@@ -303,6 +317,15 @@ body {
     right: -70px;
     top: 37px;
     z-index: -1;
+  }
+
+  @media (max-width: 780px) {
+    margin-bottom: 3rem;
+    &::after {
+      width: 87%;
+      height: 74%;
+      top: 21px;
+    }
   }
 }
 
@@ -425,18 +448,59 @@ body {
     margin: auto;
     height: 65vh;
     width: 70%;
-    background: red;
+    background: url(../cert1.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
+    rotate: 270deg;
   }
   .image2 {
     margin: auto;
     height: 65vh;
     width: 70%;
-    background: red;
+    background: url(../cert2.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
   }
   .image3 {
     margin: auto;
     height: 65vh;
     width: 70%;
-    background: red;
+    background: url(../cert3.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
+    rotate: 270deg;
+  }
+  .image4 {
+    margin: auto;
+    height: 65vh;
+    width: 70%;
+    background: url(../cert4.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
+    rotate: 270deg;
+  }
+  .image5 {
+    margin: auto;
+    height: 65vh;
+    width: 70%;
+    background: url(../cert5.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
+    rotate: 270deg;
+  }
+  .image6 {
+    margin: auto;
+    height: 65vh;
+    width: 70%;
+    background: url(../cert6.jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-size: contain;
+    rotate: 270deg;
   }
 }
